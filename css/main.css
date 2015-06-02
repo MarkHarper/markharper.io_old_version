@@ -127,7 +127,7 @@ PAGE: PORTFOLIO
   margin: 0;
   padding: 5%;
   font-size: 0.75em;
-  color: #bdc3c7
+  color: #HSLA(256, 12%, 22%, 1);
 }
 
 
@@ -185,51 +185,36 @@ COLORS
 
 /* site body */
 body {
-  background-color: #fff;
-  color: #999;
+  background-color: white;
+  color: HSLA(256, 12%, 22%, 1);
 }
 
 /* green header */
 header {
-  background: #6ab47b;
-  border-color: #599a68;
+  background: white;
 }
 
 /* nav background on mobile */
 nav {
-  background: #599a68;
+  background: white;
 }
 
 /* logo text */
 h1, h2 {
-  color: #fff;
+  color: HSLA(256, 12%, 22%, 1);
 }
 
 /* links */
 a {
-  color: #6ab47b;
+  color: HSLA(256, 12%, 22%, 1);
 }
 
 /* nav link */
 nav a, nav a:visited {
-  color: #fff;
+  color: HSLA(256, 12%, 22%, 1);
 }
 
 /* selected nav link */
 nav a.selected, nav a:hover {
-  color: #32673f;
+  color: HSLA(256, 12%, 22%, 1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
