@@ -148,6 +148,8 @@ PAGE: ABOUT
 
 
 
+
+
 /**********************************
 PAGE: CONTACT
 ***********************************/
@@ -180,7 +182,13 @@ PAGE: CONTACT
   background-image: url('../img/twitter.png');
 }
 
+#primary {
+  font-family: sans-serif;
+}
 
+#secondary {
+  font-family: sans-serif;
+}
 
 /**********************************
 COLORS
