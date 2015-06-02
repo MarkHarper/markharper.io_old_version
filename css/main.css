@@ -3,7 +3,7 @@ GENERAL
 ***********************************/
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
 }
 
 #wrapper {
@@ -43,7 +43,7 @@ header {
 }
 
 h1 {
-  font-family: 'Changa One', sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 15px 0;
   font-size: 1.75em;
   font-weight: normal;
@@ -51,6 +51,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'Raleway', sans-serif;
   font-size: 0.75em;
   margin: -5px 0 0;
   font-weight: normal;
@@ -63,6 +64,7 @@ NAVIGATION
 ***********************************/
 
 nav {
+  font-family: 'Raleway', sans-serif;
   text-align: center;
   padding: 10px 0;
   margin: 20px 0 0;
@@ -128,6 +130,7 @@ PAGE: PORTFOLIO
   padding: 5%;
   font-size: 0.75em;
   color: #HSLA(256, 12%, 22%, 1);
+  font-family: 'Raleway', sans-serif;
 }
 
 
@@ -197,6 +200,7 @@ header {
 /* nav background on mobile */
 nav {
   background: white;
+  box-shadow: 0px 7px 9px -6px HSLA(256, 12%, 22%, 1);
 }
 
 /* logo text */
