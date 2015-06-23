@@ -133,7 +133,12 @@ PAGE: PORTFOLIO
   font-family: 'Raleway', sans-serif;
 }
 
-
+#survey-app {
+    border-left: 1px solid #333;
+    box-sizing: border-box;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
 
 /**********************************
 PAGE: ABOUT
