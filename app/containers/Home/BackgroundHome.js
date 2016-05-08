@@ -5,9 +5,9 @@ function BackgroundHome (width, height) {
   var height = Number(height);
   var me = function (p) {
     var particles = [];
-    var numParticles = 25;
-    var minDist = 100;
-    var springAmount = 0.001;
+    var numParticles = 45;
+    var minDist = 80;
+    var springAmount = 0.0015;
 
     p.setup = function () {
       p.createCanvas(width, height);
@@ -48,7 +48,7 @@ function BackgroundHome (width, height) {
       p.noStroke();
        
       for(var i=0; i<numParticles; i++) {
-        var ball = new Ball(5);
+        var ball = new Ball(8);
         ball.x = p.random(width);
         ball.y = p.random(height);
         ball.vx = p.random(6) - 3;
