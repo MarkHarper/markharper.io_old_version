@@ -1,2 +1,5 @@
 export Home from './Home/Home'
 export Contact from './Contact/Contact'
+export Articles from './Articles/Articles'
+export Skills from './Skills/Skills'
+export Portfolio from './Portfolio/Portfolio'
