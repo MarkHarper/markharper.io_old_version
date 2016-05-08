@@ -1,10 +1,14 @@
 import React from 'react'
-import { test } from './styles.css'
+import { test, homeText } from './styles.css'
+import BackgroundHome from './BackgroundHome.js'
+import p5 from 'p5'
 
-function Home () {
+function Home ({ width, height }) {
+  console.log(width, height);
+  new p5(BackgroundHome(width, height), 'home')
   return (
     <div id="home">
-      <div>
+      <div className={homeText}>
         <p className={test}>
           Mark Harper
         </p>
@@ -12,7 +16,7 @@ function Home () {
           Software Developer
         </p>
       </div>
-      <div>
+      <div className={homeText}>
         <span className={test}>
           Home
         </span>
