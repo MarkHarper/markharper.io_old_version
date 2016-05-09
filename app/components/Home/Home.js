@@ -1,11 +1,11 @@
 import React from 'react'
 import { name, title, nameTitle, nameTitleContainer, nav, navContainer } from './styles.css'
-import { section } from 'sharedStyles/styles.css'
+import { Image } from 'sharedStyles/styles.css'
 import { Link } from 'react-router'
 
 function Home () {
   return (
-    <div id="home" className={section}>
+    <div className={Image} id='home'>
       <div className={nameTitleContainer}>
         <div className={nameTitle}>
           <p className={name}>
@@ -35,6 +35,7 @@ function Home () {
           </span></Link>
         </div>
       </div>
+
     </div>
   )
 }
