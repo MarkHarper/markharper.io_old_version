@@ -1,23 +1,30 @@
 import React from 'react'
-import { skills } from './styles.css'
-import { Image, container } from 'sharedStyles/styles.css'
+import { skills, skillsChart, softSkills, skillsHeader, skillsList, skillsItem } from './styles.css'
+import { container } from 'sharedStyles/styles.css'
+import { BarChart } from 'components'
 
-function Skills () {
+function Skills (props) {
+  const style = {
+    height: props.height
+  }
   return (
-    <div className={Image} id={skills}>
-      <section className={container}>
-        <h3>General Information</h3>
-        <p>I am currently seeking front end development work, as I have recently The Iron Yard's front end engineering program.</p>
-        <p>If you would like to hire me, work with me, or simply want to talk about web development, it is best to reach me through email.</p>
-      </section>
-      <section className={container}>
-        <h3>Contact Details</h3>
-        <ul class="contact-info">
-          <li class="phone"><a href="tel:919-698-9265">(919)-698-9265</a></li>
-          <li class="mail"><a href="mailto:markharper20@gmail.com">markharper20@gmail.com</a></li>
-          <li class="twitter"><a href="http://twitter.com/intent/tweet?screen_name=nickrp">@IAmMarkHarper</a></li>
+    <div className={skills} style={style}>
+      <div className={skillsChart}>
+        <h3 className={skillsHeader}>Technical Skills</h3>
+        <BarChart data={[ 30, 10, 5, 8, 15, 10 ]}
+            width={400}
+            height={200}
+            color="cornflowerblue"
+            title="fun" />
+      </div>
+      <div className={softSkills}>
+        <h3 className={skillsHeader}>Soft Skills</h3>
+        <ul className={skillsList}>
+          <li className={skillsItem}>Leadership</li>
+          <li className={skillsItem}>Organization</li>
+          <li className={skillsItem}>Punctual</li>
         </ul>
-      </section>
+      </div>
     </div>
   )
 }

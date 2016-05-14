@@ -1,10 +1,10 @@
 import React from 'react'
 import { contact } from './styles.css'
-import { Image, container } from 'sharedStyles/styles.css'
+import { container } from 'sharedStyles/styles.css'
 
 function Contact () {
   return (
-    <div className={Image} id={contact}>
+    <div id={contact}>
       <section className={container}>
         <h3>General Information</h3>
         <p>I am currently seeking front end development work, as I have recently The Iron Yard's front end engineering program.</p>

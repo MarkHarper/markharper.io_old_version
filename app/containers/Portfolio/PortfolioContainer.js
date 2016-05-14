@@ -4,7 +4,7 @@ import { Portfolio } from 'components'
 const PortfolioContainer = React.createClass({
   render () {
     return (
-      <Portfolio />
+      <Portfolio width={window.innerWidth} height={window.innerHeight - 73}/>
     )
   },
 })

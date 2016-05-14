@@ -1,41 +1,20 @@
 import React from 'react'
-import { name, title, nameTitle, nameTitleContainer, nav, navContainer } from './styles.css'
-import { Image } from 'sharedStyles/styles.css'
 import { Link } from 'react-router'
+import { targetButton, hireMe, title, tagline, btnInTouch, titleTag } from './styles.css'
+import { home, darkBtn } from 'sharedStyles/styles.css'
 
 function Home () {
   return (
-    <div className={Image} id='home'>
-      <div className={nameTitleContainer}>
-        <div className={nameTitle}>
-          <p className={name}>
-            Mark Harper
-          </p>
-          <p className={title}>
-            Software Developer
-          </p>
+    <div id={home}>
+      <div className={hireMe}>
+        <div className={titleTag}>
+          <span className={title}>Javascript Developer</span>
+          <p className={tagline}>I write code...</p>
+        </div>
+        <div className={btnInTouch}>
+          <Link to="/contact" className={darkBtn}>Get In Touch</Link>
         </div>
       </div>
-      <div className={navContainer}>
-        <div className={nav}>
-          <Link to="/"><span>
-            Home
-          </span></Link>
-          <Link to="/portfolio"><span>
-            Portfolio
-          </span></Link>
-          <Link to="/skills"><span>
-            Skills
-          </span></Link>
-          <Link to="/articles"><span>
-            Articles
-          </span></Link>
-          <Link to="/contact"><span>
-            Hire Me
-          </span></Link>
-        </div>
-      </div>
-
     </div>
   )
 }
