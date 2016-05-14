@@ -4,7 +4,7 @@ import { Skills } from 'components'
 const SkillsContainer = React.createClass({
   render () {
     return (
-      <Skills />
+      <Skills width={window.innerWidth} height={window.innerHeight - 73}/>
     )
   },
 })

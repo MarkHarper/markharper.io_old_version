@@ -1,46 +1,44 @@
-.navContainer, .nameTitleContainer {
-  position: absolute;
-}
+.targetButton {
 
-.navContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.nav {
-  width: 40%;
-  margin: 13% 12%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-family: raleway;
-  font-size: 1.1em;
-}
-
-.nameTitleContainer {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  align-items: flex-start;
-  height: 100%;
-}
-
-.nameTitle {
-  margin: 7% 16%;
-}
-
-.name {
-  font-family: Vokurn;
-  font-weight: bold;
-  font-size: 2.5em;
-  margin-bottom: 0em;
 }
 
 .title {
-  font-family: raleway;
-  margin-top: 0;
+  text-align: center;
+  color: #FAFAFA;
+  font-size: 3.2em;
+  margin: 0 0 0.3em 0;
+  font-weight: 600;
+  font-family: 'Raleway', 'sans-serif';
+}
+
+.titleTag {
+  border-radius: 2px;
+  padding: 1em 1em 0.5em;
+  margin: 0 auto;
+}
+
+.hireMe {
+  width: 45%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  padding: 0 0 1em 0;
+}
+
+.tagline {
+  margin: 1em 1.6em 1em;
+  color: #FAFAFA;
+  padding: 0.5em 1em;
   font-size: 1.1em;
+  font-family: 'Raleway', 'sans-serif';
+}
+
+.btnInTouch {
+  margin: 1em auto;
+  background-color: #30CEFF;
+  border-radius: 2px;
+  font-size: 1.4em;
 }
