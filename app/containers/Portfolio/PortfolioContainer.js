@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Portfolio } from 'components'
+import { navbar } from 'sharedStyles/styles.css'
 
-const PortfolioContainer = React.createClass({
+class PortfolioContainer extends Component {
   render () {
     return (
-      <Portfolio width={window.innerWidth} height={window.innerHeight - 73}/>
+      <Portfolio width={window.innerWidth} height={window.innerHeight - 74}/>
     )
-  },
-})
+  }
+}
 
 export default PortfolioContainer

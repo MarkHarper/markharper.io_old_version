@@ -1,35 +1,54 @@
 .skills {
-  background-color: #fafafa;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 8% 0 0 0;
+  padding: 0 0 0 0;
   box-sizing: border-box;
 }
 
+#overview {
+  background-color: #F9F9F9;
+}
+
+#inDepth {
+  background-color: #E3F8FF;
+}
+
 .skillsChart {
-  width: 40%;
-  margin: 0 5%;
+  composes: container from 'sharedStyles/styles.css';
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
 }
 
 .softSkills {
-  width: 20%;
-  margin: 0 15%;
-  padding: 0 5% 5% 5%;
+  composes: container from 'sharedStyles/styles.css';
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
 }
 
 .skillsHeader {
-  font-family: Montserrat;
-  font-weight: normal;
-  font-size: 1.61em;
-  text-align: center;
+  color: #777;
+  font-family: 'Ubuntu', sans-serif;;
+  font-weight: 500;
+  font-size: 2em;
 }
 
 .skillsList {
-  padding: 0 0 0 0;
+  width: 65%;
 }
 
 .skillsItem {
-  padding: 0 0 1em 0;
+  color: #333;
+  font-family: 'Ubuntu' sans-serif;;
+  padding: 1em 0;
+  font-size: 1.1em;
+  line-height: 1.8;
 }

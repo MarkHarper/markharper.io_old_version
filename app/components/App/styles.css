@@ -11,14 +11,23 @@
   font-family: 'Stalemate';
   font-size: 2.5em;
   color: #333;
-  padding: 0 0 0 6%;
+  padding: 0 0 0 7.5%;
   font-weight: bold;
   width: 33%;
   letter-spacing: 0.2em;
 }
 
+.nameLink {
+  text-decoration: none;
+  color: #333;
+}
+
 .name:hover {
   cursor: pointer;
+}
+
+.name:hover .hide {
+  background-color: transparent;
 }
 
 .nav {
@@ -43,4 +52,21 @@
 
 .transitionGroup {
   margin-top: 74px;
+}
+
+.icon {
+  width: 45px;
+  vertical-align: middle;
+  position: absolute;
+  transform: translate(-125%, -2%);
+}
+
+.hide {
+  background-color: #fff;
+  width: 45px;
+  height: 18px;
+  position: absolute;
+  z-index: 5;
+  transform: translate(-125%, -11%);
+  transition: background-color 0.3s;
 }
