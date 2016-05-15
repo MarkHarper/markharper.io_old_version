@@ -1,76 +1,75 @@
 import React from 'react'
-import { portfolio } from './styles.css'
+import { portfolio, portfolioImg, imgContainer, descriptionContainer, listTitle, list } from './styles.css'
 import { container } from 'sharedStyles/styles.css'
 
 function Portfolio (props) {
-  const styleA = {
-    height: props.height,
-    backgroundColor: '#fafafa'
+  const style = {
+    height: props.height
   }
-  const styleB = {
-    height: props.height,
-    backgroundColor: '#FFF'
-  }
+
   return (
     <div>
-      <div id={portfolio} style={styleA}>
-        <section className={container}>
-          <h3>General Information</h3>
-          <p>I am currently seeking front end development work, as I have recently The Iron Yard's front end engineering program.</p>
-          <p>If you would like to hire me, work with me, or simply want to talk about web development, it is best to reach me through email.</p>
-        </section>
-        <section className={container}>
-          <h3>Contact Details</h3>
-          <ul class="contact-info">
-            <li class="phone"><a href="tel:919-698-9265">(919)-698-9265</a></li>
-            <li class="mail"><a href="mailto:markharper20@gmail.com">markharper20@gmail.com</a></li>
-            <li class="twitter"><a href="http://twitter.com/intent/tweet?screen_name=nickrp">@IAmMarkHarper</a></li>
+      <div id={portfolio} style={style}>
+        <section className={descriptionContainer}>
+          <h3 className={listTitle}>Factivate</h3>
+          <ul className={list}>
+            <li>Constructed editable, draggable, resizable charting components, revising UI/UX via iterative testing with internal
+              and external teams (C3.js)</li>
+            <li>Solved UI/UX & architectural barrier of reading data from HTML5 Canvas and pushing data to the clipboard for the
+              application’s cut/copy/paste functionality (jQuery & Javascript)</li>
+            <li>Refactored Front-End components to reduce bugs and improve test coverage</li>
+            <li>Contributed to daily standups and sprint retrospectives to focus on fast-paced development of an MVP</li>
+            <li>Worked with Sales, Marketing and Quality Assurance to bring client recommendations into the product, implement
+            user-behavior analytics and reduce feature regression</li>
           </ul>
+        </section>
+        <section className={imgContainer}>
+          <img className={portfolioImg} src="./images/factivate.png"/>
         </section>
       </div>
-      <div id={portfolio} style={styleB}>
-        <section className={container}>
-          <h3>General Information</h3>
-          <p>I am currently seeking front end development work, as I have recently The Iron Yard's front end engineering program.</p>
-          <p>If you would like to hire me, work with me, or simply want to talk about web development, it is best to reach me through email.</p>
-        </section>
-        <section className={container}>
-          <h3>Contact Details</h3>
-          <ul class="contact-info">
-            <li class="phone"><a href="tel:919-698-9265">(919)-698-9265</a></li>
-            <li class="mail"><a href="mailto:markharper20@gmail.com">markharper20@gmail.com</a></li>
-            <li class="twitter"><a href="http://twitter.com/intent/tweet?screen_name=nickrp">@IAmMarkHarper</a></li>
+      <div id={portfolio} style={style}>
+        <section className={descriptionContainer}>
+          <h3 className={listTitle}>Build It Green</h3>
+          <ul className={list}>
+            <li>Built a responsive single-page web application with Backbone.js</li>
+            <li>Used D3.js to build over 40 visualizations, pulling in LEED scoring data from a Django API</li>
+            <li>Created a clean, distinct Front End design with Google's Material Design Lite to display over 80 charts</li>
+            <li>Connected unique content to each chart using both D3.js and jQuery</li>
+            <li>Collaborated with Back End team members to establish an effective git workflow</li>
           </ul>
+        </section>
+        <section className={imgContainer}>
+          <img className={portfolioImg} src="./images/big.png"/>
         </section>
       </div>
-      <div id={portfolio} style={styleA}>
-        <section className={container}>
-          <h3>General Information</h3>
-          <p>I am currently seeking front end development work, as I have recently The Iron Yard's front end engineering program.</p>
-          <p>If you would like to hire me, work with me, or simply want to talk about web development, it is best to reach me through email.</p>
-        </section>
-        <section className={container}>
-          <h3>Contact Details</h3>
-          <ul class="contact-info">
-            <li class="phone"><a href="tel:919-698-9265">(919)-698-9265</a></li>
-            <li class="mail"><a href="mailto:markharper20@gmail.com">markharper20@gmail.com</a></li>
-            <li class="twitter"><a href="http://twitter.com/intent/tweet?screen_name=nickrp">@IAmMarkHarper</a></li>
+      <div id={portfolio} style={style}>
+        <section className={descriptionContainer}>
+          <h3 className={listTitle}>Game of Life</h3>
+          <ul className={list}>
+            <li>Built a responsive single-page web application with Backbone.js</li>
+            <li>Used D3.js to build over 40 visualizations, pulling in LEED scoring data from a Django API</li>
+            <li>Created a clean, distinct Front End design with Google's Material Design Lite to display over 80 charts</li>
+            <li>Connected unique content to each chart using both D3.js and jQuery</li>
+            <li>Collaborated with Back End team members to establish an effective git workflow</li>
           </ul>
+        </section>
+        <section className={imgContainer}>
+          <img className={portfolioImg} src="./images/gol.png"/>
         </section>
       </div>
-      <div id={portfolio} style={styleB}>
-        <section className={container}>
-          <h3>General Information</h3>
-          <p>I am currently seeking front end development work, as I have recently The Iron Yard's front end engineering program.</p>
-          <p>If you would like to hire me, work with me, or simply want to talk about web development, it is best to reach me through email.</p>
-        </section>
-        <section className={container}>
-          <h3>Contact Details</h3>
-          <ul class="contact-info">
-            <li class="phone"><a href="tel:919-698-9265">(919)-698-9265</a></li>
-            <li class="mail"><a href="mailto:markharper20@gmail.com">markharper20@gmail.com</a></li>
-            <li class="twitter"><a href="http://twitter.com/intent/tweet?screen_name=nickrp">@IAmMarkHarper</a></li>
+      <div id={portfolio} style={style}>
+        <section className={descriptionContainer}>
+          <h3 className={listTitle}>Memory</h3>
+          <ul className={list}>
+            <li>Built a responsive single-page web application with Backbone.js</li>
+            <li>Used D3.js to build over 40 visualizations, pulling in LEED scoring data from a Django API</li>
+            <li>Created a clean, distinct Front End design with Google's Material Design Lite to display over 80 charts</li>
+            <li>Connected unique content to each chart using both D3.js and jQuery</li>
+            <li>Collaborated with Back End team members to establish an effective git workflow</li>
           </ul>
+        </section>
+        <section className={imgContainer}>
+          <img className={portfolioImg} src="./images/memory.png"/>
         </section>
       </div>
     </div>
