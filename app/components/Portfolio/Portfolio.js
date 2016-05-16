@@ -28,6 +28,9 @@ function Portfolio (props) {
         </section>
       </div>
       <div id={portfolio} style={style}>
+        <section className={imgContainer}>
+          <img className={portfolioImg} src="./images/big.png"/>
+        </section>
         <section className={descriptionContainer}>
           <h3 className={listTitle}>Build It Green</h3>
           <ul className={list}>
@@ -37,9 +40,6 @@ function Portfolio (props) {
             <li>Connected unique content to each chart using both D3.js and jQuery</li>
             <li>Collaborated with Back End team members to establish an effective git workflow</li>
           </ul>
-        </section>
-        <section className={imgContainer}>
-          <img className={portfolioImg} src="./images/big.png"/>
         </section>
       </div>
       <div id={portfolio} style={style}>
@@ -58,6 +58,9 @@ function Portfolio (props) {
         </section>
       </div>
       <div id={portfolio} style={style}>
+        <section className={imgContainer}>
+          <img className={portfolioImg} src="./images/memory.png"/>
+        </section>
         <section className={descriptionContainer}>
           <h3 className={listTitle}>Memory</h3>
           <ul className={list}>
@@ -67,9 +70,6 @@ function Portfolio (props) {
             <li>Connected unique content to each chart using both D3.js and jQuery</li>
             <li>Collaborated with Back End team members to establish an effective git workflow</li>
           </ul>
-        </section>
-        <section className={imgContainer}>
-          <img className={portfolioImg} src="./images/memory.png"/>
         </section>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import p5 from 'p5';
+import { home } from 'sharedStyles/styles.css'
 
 function BackgroundHome (width, height) {
   var width = Number(width);
@@ -10,13 +11,14 @@ function BackgroundHome (width, height) {
     var springAmount = 0.0015;
 
     p.setup = function () {
-      p.createCanvas(width, height);
+      var canvas = p.createCanvas(width, height);
       p.frameRate(40);
+      canvas.parent(home);
       initialize();
     }
 
     p.draw = function () {
-      p.background(0, 68, 102);
+      p.background(0, 49, 74);
       for(var i=0; i<numParticles; i++){
         var particle = particles[i];      
         particle.x += particle.vx;

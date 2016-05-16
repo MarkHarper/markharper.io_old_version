@@ -5,7 +5,7 @@ import { navbar } from 'sharedStyles/styles.css'
 class PortfolioContainer extends Component {
   render () {
     return (
-      <Portfolio width={window.innerWidth} height={window.innerHeight - 74}/>
+      <Portfolio width={window.innerWidth} height={window.innerHeight - 83}/>
     )
   }
 }

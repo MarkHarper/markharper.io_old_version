@@ -4,11 +4,13 @@
 
 .title {
   text-align: center;
-  color: #FAFAFA;
+  color: #FFF;
   font-size: 3.2em;
   margin: 0 0 0.3em 0;
-  font-weight: 600;
-  font-family: 'Raleway', 'sans-serif';
+  font-weight: normal;
+  font-family: 'Montserrat', 'sans-serif';
+  letter-spacing: 0.1em;
+  display: block;
 }
 
 .titleTag {
@@ -30,10 +32,12 @@
 
 .tagline {
   margin: 1em 1.6em 1em;
-  color: #FAFAFA;
-  padding: 0.5em 1em;
-  font-size: 1.1em;
-  font-family: 'Raleway', 'sans-serif';
+  color: #FBFBFB;
+  padding: 0.5em 0em 0.5em 0;
+  font-size: 1.3em;
+  font-family: 'Montserrat', 'sans-serif';
+  letter-spacing: 0.1em;
+  line-height: 1.4em;
 }
 
 .btnInTouch {

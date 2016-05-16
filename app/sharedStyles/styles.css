@@ -47,11 +47,47 @@ html, body {
   z-index: 1;
 }
 
+.activeLink {
+  display: inline-block;
+	position: relative;
+  font-size: 1em;
+  text-decoration: none;
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #333;
+  padding: 0.55em 0em;
+  text-decoration: none;
+  margin-top: 7px;
+}
+
+.activeLink:after {
+	content: '';
+	display: block;
+	margin: 5px 0em 0 0;
+	height: 3px;
+	width: 100%;
+	background-color: rgb(48, 206, 255);
+}
+
+.activeLink:before {
+	content: '';
+	display: block;
+	margin: 0 0 5px 0em;
+	height: 3px;
+	width: 100%;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+	background-color: rgb(48, 206, 255);
+}
+
 .link, .link:hover {
   color: #333;
   padding: 0.55em 0em;
   text-decoration: none;
-  border-top: 1px black;
 }
 
 .link {
@@ -83,7 +119,7 @@ html, body {
 
 .link:hover:after {
 	width: 100%;
-	background: #30CEFF;
+	background: rgb(0, 49, 74);
 }
 
 .link:before {
@@ -102,7 +138,7 @@ html, body {
 
 .link:hover:before {
 	width: 100%;
-	background: #30CEFF;
+	background: rgb(0, 49, 74);
 }
 
 .lightBtn, .darkBtn{
