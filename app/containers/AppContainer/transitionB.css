@@ -1,0 +1,21 @@
+.leave {
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+}
+
+.leaveActive {
+  position: absolute;
+  transform: translate3d(100%, 0, 0);
+  transition: all 400ms ease-in-out;
+}
+
+.enter {
+  position: absolute;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.enterActive {
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+  transition: all 400ms ease-in-out;
+}

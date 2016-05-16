@@ -9,7 +9,7 @@ function Home () {
       <div className={hireMe}>
         <div className={titleTag}>
           <span className={title}>Javascript Developer</span>
-          <p className={tagline}>I write code...</p>
+          <p className={tagline}>I have a passion for code, coffee and challenging projects</p>
         </div>
         <div className={btnInTouch}>
           <Link to="/contact" className={darkBtn}>Get In Touch</Link>

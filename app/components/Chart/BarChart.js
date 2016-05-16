@@ -1,25 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import 'd3';
-import Bar from './Bar'
-import Chart from './Chart'
-import Axis from './Axis'
-
-class DataSeries extends Component {
-  render() {
-    let props = this.props;
-
-    let bars = this.props.data.map(function(point, i) {
-      return (
-        <Bar height={props.height - props.yScale(point)} width={props.xScale.rangeBand()} offset={props.xScale(i)} availableHeight={props.height} color={props.color} key={i} />
-      )
-    });
-
-    return (
-      <g>{bars}</g>
-    )
-  }
-}
+import Chart from './Chart.js'
+import Axis from './Axis.js'
+import DataSeries from './DataSeries.js'
 
 class BarChart extends Component {
   render() {
