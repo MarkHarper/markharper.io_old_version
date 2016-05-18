@@ -5,12 +5,13 @@ var watch = require('gulp-watch');
 // Common patterns used throughout the gulp configuration
 var src = {
   allFont: './app/**/*.{ttf,woff,otf,eot}',
-  allImg: './app/**/*.{pdf,png,svg}'
+  allImg: './app/**/*.{pdf,png,svg}',
+  allProcessing: './app/processing/**'
 };
 
 // The default task is what runs when you type 'gulp' in the terminal
 gulp.task('default', function () {
-  return gulp.start('img', 'font', 'watch');
+  return gulp.start('img', 'font', 'processing', 'watch');
 });
 
 // The watch task watches a directory for changes and tells the
@@ -25,6 +26,10 @@ gulp.task('watch', function () {
   watch(src.allFont, function () {
     gulp.start('font');
   });
+
+  watch(src.allProcessing, function () {
+    gulp.start('processing');
+  });
 });
 
 // Move any images to the dist folder
@@ -37,4 +42,10 @@ gulp.task('img', function () {
 gulp.task('font', function () {
   return gulp.src(src.allFont)
     .pipe(gulp.dest('./dist'));
+});
+
+// Move any processing files to the dist folder
+gulp.task('processing', function () {
+  return gulp.src(src.allProcessing)
+    .pipe(gulp.dest('./dist/processing'));
 });

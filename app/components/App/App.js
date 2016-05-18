@@ -3,9 +3,9 @@ import { section, container, link, activeLink, navbar, lightBtn } from 'sharedSt
 import { Link } from 'react-router'
 import { app, name, nav, resume, navButton, transitionGroup, icon, hide, nameLink} from './styles.css'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import Button from '.././Button/Button.js'
 
 function App (props) {
-  console.log(props)
   const height = {
     height: props.height
   }
@@ -24,12 +24,15 @@ function App (props) {
               Portfolio
             </span></Link>
           <Link to="/skills" className={props.location.pathname === '/skills' ? activeLink : link}><span>
-              Skills
+              About
             </span></Link>
         </div>
-        <div className={resume}>
-          <a href="/images/resume.pdf" target="_blank" className={lightBtn}>R&Eacute;sum&Eacute;</a>
-        </div>
+        <Button content={'R' + String.fromCharCode(233) + 'sum' + String.fromCharCode(233)}
+                class={lightBtn}
+                to={'/images/resume.pdf'}
+                target="_blank"
+                containerClass={resume}>
+        </Button>
       </div>
       <div>
         <ReactCSSTransitionGroup

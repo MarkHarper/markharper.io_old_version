@@ -19,7 +19,7 @@ class Axis extends Component {
     let translate = "translate(0,"+(this.props.height)+")";
 
     return (
-      <g className={this.props.className} transform={this.props.className=='xAxis'?translate:""}>
+      <g className={this.props.className} transform={this.props.axisType == 'xAxis' ? translate:""}>
       </g>
     )
   }
