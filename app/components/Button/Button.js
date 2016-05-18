@@ -1,36 +1,55 @@
-import React from 'react'
-import { lightBtn } from 'sharedStyles/styles.css'
-import { ink, animate } from './styles.css'
+import React, { PropTypes, Component } from 'react'
+import { ink, animate, outerContainer } from './styles.css'
 import { Link } from 'react-router'
 import classnames from 'classnames'
+import Ripple from './Ripple.js'
 
-function Button (props) {
-  var inkClass = classnames({
-      ink: true
-    });
-  function ripple (e) {
-    var ink = e.currentTarget.querySelector('.ink');
-    ink.classList.remove('animate');
+const scale = {
+  boxShadow: 'rgba(0, 0, 0, 0.24) 0 4px 8px 0'
+}
 
-    if(!ink.offsetHeight && !ink.offsetWidth){
-      var d = Math.max(self.offsetWidth, self.offsetHeight);
-      ink.style.height = d;
-      ink.style.width = d;
+class Button extends Component {
+  constructor () {
+    super()
+    this.state = {
+      cursorPos: {},
+      scale: false
     }
-    e.preventDefault();
-    var x = e.pageX - ink.offsetWidth/2;
-    var y = e.pageY - ink.offsetHeight/2;
+  }
+  removeScale () {
+    this.setState({
+      scale: false
+    })
+  }
+  handleClick(e){
+    let cursorPos = {
+      top: e.clientY,
+      left: e.clientX,
+      time: Date.now()
+    }
+    this.setState({
+      cursorPos: cursorPos,
+      scale: true
+    })
+  }
+  render () {
+    return (
+      <div className={outerContainer}>
+        <div className={this.props.containerClass} onMouseDown={(e) => {this.handleClick(e)}} onMouseUp={() => {this.removeScale()}}>
+          <Ripple removeScale={() => {this.removeScale()}} cursorPos={ this.state.cursorPos } containerClass={this.props.containerClass}></Ripple>
+          <a to={this.props.to} className={this.props.class} style={this.state.scale === false ? {} : scale}>{this.props.content}</a>
+        </div>
+      </div>
+    )
+  }
+}
 
-    ink.style.top = y+'px';
-    ink.style.left = x+'px';
-    ink.classList.add('animate');
-  };
-  return (
-    <div onMouseDown={ripple} className={props.containerClass}>
-      <span className={inkClass}></span>
-      <Link to={props.link} target={props.target} className={props.class}>{props.content}</Link>
-    </div>
-  )
+Button.propTypes = {
+  to: PropTypes.string.isRequired,
+  target: PropTypes.string.isRequired,
+  class: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  containerClass: PropTypes.string.isRequired
 }
 
 export default Button

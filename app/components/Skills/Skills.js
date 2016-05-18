@@ -24,20 +24,22 @@ function Skills (props) {
       </div>
       <div className={skills} style={style} id={inDepth}>
         <div className={skillsChart}>
-          <h3 className={skillsHeader}>Technical Skills</h3>
-          {/*<BarChart levels={[ 100, 20, 30, 40, 20, 30 ]}
-              categories={['Javascript', 'HTML/CSS', 'React', 'Backbone', 'jQuery', 'Lodash', 'D3', 'p5', 'Bootstrap', 'PureCSS']}
+          <h3 className={skillsHeader}>Tools</h3>
+          <BarChart data={[{'Javascript': 100}, {'HTML/CSS': 20}, {'React': 40}, {'Backbone': 80}]}
+              barPadding={0.1}
               width={400}
               height={200}
               color="cornflowerblue"
-              title="fun" />*/}
+              title="fun" />
         </div>
         <div className={softSkills}>
-          <h3 className={skillsHeader}>Soft Skills</h3>
+          <h3 className={skillsHeader}>Techniques</h3>
           <ul className={skillsList}>
-            <li className={skillsItem}>Leadership</li>
-            <li className={skillsItem}>Organization</li>
-            <li className={skillsItem}>Punctual</li>
+            <li className={skillsItem}>Object Oriented Programming</li>
+            <li className={skillsItem}>Functional Reactive Programming</li>
+            <li className={skillsItem}>Flux</li>
+            <li className={skillsItem}>Responsive Web Design</li>
+            <li className={skillsItem}>Material Design</li>
           </ul>
         </div>
       </div>

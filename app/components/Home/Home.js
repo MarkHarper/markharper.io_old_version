@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import { targetButton, hireMe, title, tagline, btnInTouch, titleTag } from './styles.css'
 import { home, darkBtn } from 'sharedStyles/styles.css'
 
-function Home () {
+function Home (props) {
   return (
     <div id={home}>
       <div className={hireMe}>

@@ -11,9 +11,8 @@ function BackgroundHome (width, height) {
     var springAmount = 0.0015;
 
     p.setup = function () {
-      var canvas = p.createCanvas(width, height);
+      p.createCanvas(width, height);
       p.frameRate(40);
-      canvas.parent(home);
       initialize();
     }
 
