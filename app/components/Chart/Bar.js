@@ -11,11 +11,18 @@ class Bar extends Component {
       .attr('fill', (d) => d.color)
       .attr('height', (d) => 0)
       .attr('width', (d) => d.width)
+      .attr('opacity', 0.7);
+
 
     selection
-      .transition().duration(3000)
+      .transition()
+      .delay(function (d) {
+        return d.order * 200;
+      })
+      .duration(2000)
       .attr('height', (d) => d.height)
-      .attr('y', (d) => d.availableHeight - d.height);
+      .attr('y', (d) => d.availableHeight - d.height)
+
   }
   componentDidMount () {
     d3.select(findDOMNode(this))

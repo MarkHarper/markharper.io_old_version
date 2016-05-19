@@ -11,7 +11,7 @@ const styles = {
   shadow: {
     // boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
     // transform: 'translate(50%, 50%)',
-    padding: '2em'
+    padding: '2em 2em 2em 5em'
   },
   title: {
     align: 'middle',
