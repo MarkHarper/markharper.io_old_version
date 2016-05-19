@@ -1,11 +1,41 @@
 .axis path,
-.axis line {
+.axis tick line {
   fill: none;
   stroke: black;
   shape-rendering: crispEdges;
 }
 
 .axis text {
+  font-family: sans-serif;
+  font-size: 11px;
+}
+
+.xAxis path,
+.xAxis tick line {
+  fill: none;
+  stroke: none;
+  shape-rendering: crispEdges;
+}
+
+.xAxis text {
+  font-family: sans-serif;
+  font-size: 11px;
+}
+
+.levelsAxis path {
+  fill: none;
+  stroke: none;
+  shape-rendering: crispEdges;
+}
+
+.levelsAxis tick line {
+  fill: 'black';
+  stroke: 'black';
+  z-index: -5;
+  shape-rendering: crispEdges;
+}
+
+.levelsAxis text {
   font-family: sans-serif;
   font-size: 11px;
 }
