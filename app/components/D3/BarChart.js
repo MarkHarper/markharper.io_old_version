@@ -6,6 +6,25 @@ import Axis from './Axis.js'
 import { axis, xAxis, yAxis, levelsAxis } from './Axis.css'
 import DataSeries from './DataSeries.js'
 
+const styles = {
+  transparentBg: {
+    background: 'transparent'
+  },
+  space: {
+    marginTop: '25px',
+  },
+  shadow: {
+    padding: '2em 2em 2em 7em'
+  },
+  title: {
+    align: 'middle',
+    fontSize: '16px'
+  },
+  margin: {
+    margin: '0 auto'
+  }
+}
+
 class BarChart extends Component {
   render() {
     let levels = ['Jon Snow', 'Broken Toys', 'Proficient', 'Like Whoa', 'Master']
@@ -31,7 +50,7 @@ class BarChart extends Component {
       .rangeRoundBands([0, this.props.width], 0.1);
 
     return (
-      <Chart width={this.props.width} height={this.props.height}>
+      <Chart style={styles.shadow} width={this.props.width} height={this.props.height}>
         <Axis names={x}
           axisType={'levelsAxis'}
           height={this.props.height}

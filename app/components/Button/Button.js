@@ -37,7 +37,7 @@ class Button extends Component {
       <div className={outerContainer}>
         <div className={this.props.containerClass} onMouseDown={(e) => {this.handleClick(e)}} onMouseUp={() => {this.removeScale()}}>
           <Ripple removeScale={() => {this.removeScale()}} cursorPos={ this.state.cursorPos } containerClass={this.props.containerClass}></Ripple>
-          <a to={this.props.to} className={this.props.class} style={this.state.scale === false ? {} : scale}>{this.props.content}</a>
+          <a href={this.props.to} className={this.props.class} style={this.state.scale === false ? {} : scale}>{this.props.content}</a>
         </div>
       </div>
     )

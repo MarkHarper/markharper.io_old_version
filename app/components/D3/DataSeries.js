@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 import d3 from 'd3'
-import ReactTransitionGroup from 'react-addons-transition-group'
 import Bar from './Bar'
 
 class DataSeries extends Component {
   render() {
-    console.log(this.props);
     let props = this.props;
     let bars = this.props.data.map(function(point, i) {
       return (
