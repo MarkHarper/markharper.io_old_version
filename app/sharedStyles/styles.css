@@ -42,7 +42,7 @@ html, body {
 }
 
 .container {
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   z-index: 1;
 }
