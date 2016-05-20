@@ -1,7 +1,7 @@
 import React from 'react'
 import { skills, skillsChart, softSkills, skillsHeader, skillsList, skillsItem, inDepth, overview } from './styles.css'
 import { container } from 'sharedStyles/styles.css'
-import { BarChart } from 'components'
+import { BarChart, VennDiagram } from 'components'
 
 function Skills (props) {
   const style = {
@@ -19,16 +19,24 @@ function Skills (props) {
           </p>
         </div>
         <div className={skillsChart}>
-          Placeholder
+          <VennDiagram
+              width={1000}
+              height={800}/>
         </div>
       </div>
       <div className={skills} style={style} id={inDepth}>
         <div className={skillsChart}>
           <h3 className={skillsHeader}>Tools</h3>
-          <BarChart data={[{'Javascript': 100}, {'HTML/CSS': 20}, {'React': 40}, {'Backbone': 80}]}
+          <BarChart data={[{'HTML/CSS': 85},
+            {'Javascript': 95},
+            {'D3': 77},
+            {'Canvas/SVG': 73},
+            {'React': 65},
+            {'Backbone': 55},
+            {'ProcessingJs': 50}]}
               barPadding={0.1}
-              width={400}
-              height={200}
+              width={800}
+              height={400}
               color="cornflowerblue"
               title="fun" />
         </div>

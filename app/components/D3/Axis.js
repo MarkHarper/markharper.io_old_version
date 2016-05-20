@@ -14,10 +14,11 @@ class Axis extends Component {
 				.tickFormat(function(d,i){
           return props.names[i];
         })
-				.tickValues(d3.range(4));
+				.tickValues(d3.range(props.names.length));
 
       let trans = function (selection) {
         selection.attr('opacity', 0)
+          .attr('fill', 'white')
           .transition()
           .delay(3000)
           .duration(500)
@@ -38,10 +39,17 @@ class Axis extends Component {
     } else {
       axis
         .innerTickSize(-this.props.width)
+
+      let styleText = function (selection) {
+        selection
+          .attr('fill', '#777')
+          .attr('padding-left', '5px');
+      }
+
       let styleTicks = function (selection) {
         selection
-          .attr('stroke', 'black')
-          .attr('fill', 'black')
+          .attr('stroke', '#777')
+          .attr('fill', '#777')
           .attr('padding-left', '5px');
       }
       d3.select(findDOMNode(this))
@@ -50,6 +58,10 @@ class Axis extends Component {
       d3.select(findDOMNode(this))
         .selectAll('line')
         .call(styleTicks);
+
+      d3.select(findDOMNode(this))
+        .selectAll('text')
+        .call(styleText);
     }
   }
 
@@ -58,7 +70,7 @@ class Axis extends Component {
   }
 
   render() {
-    let translate = "translate(0,"+(this.props.height - 35)+")";
+    let translate = "translate(0,"+(this.props.height - 50)+")";
     return (
       <g className={this.props.className}
         transform={this.props.axisType == 'xAxis' ? translate:""}>

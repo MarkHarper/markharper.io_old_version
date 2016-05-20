@@ -36,12 +36,10 @@ class Ripple extends Component {
       if(this.state.animate){
         this.setState({ animate: false }, () => {
           this.ripple(nextProps.cursorPos)
-          // this.props.removeScale()
         })
       }
       else {
         this.ripple(nextProps.cursorPos)
-        // this.props.removeScale()
       }
     }
   }
