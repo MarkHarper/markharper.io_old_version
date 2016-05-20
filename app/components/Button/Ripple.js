@@ -11,7 +11,7 @@ class Ripple extends Component {
       width: 0,
       height: 0,
       top: 0,
-      left: 0,
+      left: 0
     }
     this.ripple = this.ripple.bind(this);
   }
