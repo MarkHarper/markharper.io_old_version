@@ -42,8 +42,8 @@
 .resume {
   border-radius: 2px;
   position: relative;
-  display: flex;
-  justify-content: flex-end;
+  float: right;
+  margin: 10px 0;
 }
 
 .navButton {

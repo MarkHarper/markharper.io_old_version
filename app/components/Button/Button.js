@@ -35,10 +35,12 @@ class Button extends Component {
   render () {
     return (
       <div className={outerContainer}>
-        <div className={this.props.containerClass} onMouseDown={(e) => {this.handleClick(e)}} onMouseUp={() => {this.removeScale()}}>
-          <Ripple removeScale={() => {this.removeScale()}} cursorPos={ this.state.cursorPos } containerClass={this.props.containerClass}></Ripple>
-          <a href={this.props.to} className={this.props.class} style={this.state.scale === false ? {} : scale}>{this.props.content}</a>
-        </div>
+        <a href={this.props.to} target={this.props.target}>
+          <div className={this.props.containerClass} onMouseDown={(e) => {this.handleClick(e)}} onMouseUp={() => {this.removeScale()}}>
+            <Ripple removeScale={() => {this.removeScale()}} cursorPos={ this.state.cursorPos } containerClass={this.props.containerClass}></Ripple>
+            <a className={this.props.class} style={this.state.scale === false ? {} : scale}>{this.props.content}</a>
+          </div>
+        </a>
       </div>
     )
   }
