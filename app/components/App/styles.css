@@ -1,3 +1,5 @@
+@import 'sharedStyles/constants.css';
+
 .app {
   height:100%;
   width: 100%;
@@ -8,9 +10,8 @@
 }
 
 .name {
-  font-family: 'Stalemate';
+  font-family: var(--accentFont);
   font-size: 2.5em;
-  color: #333;
   padding: 0 0 0 7.5%;
   font-weight: bold;
   width: 33%;
@@ -21,7 +22,7 @@
 
 .nameLink {
   text-decoration: none;
-  color: #333;
+  color: var(--darkGrey);
 }
 
 .name:hover {
@@ -62,7 +63,7 @@
 }
 
 .hide {
-  background-color: #fff;
+  background-color: var(--white);
   width: 45px;
   height: 18px;
   position: absolute;

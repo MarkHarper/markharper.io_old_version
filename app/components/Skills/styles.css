@@ -8,11 +8,11 @@
 }
 
 #overview {
-  background-color: #F9F9F9;
+  background-color: var(--primaryWhite);
 }
 
 #inDepth {
-  background-color: #E3F8FF;
+  background-color: var(--lightPrimary);
 }
 
 .skillsChart {
@@ -36,7 +36,7 @@
 }
 
 .softSkills p {
-  color: #777;
+  color: var(--grey);
   font-family: 'Ubuntu', sans-serif;;
   padding: 1em 0;
   font-size: 1.1em;
@@ -45,7 +45,7 @@
 }
 
 .skillsHeader {
-  color: #333;
+  color: var(--darkGrey);
   font-family: 'Ubuntu', sans-serif;;
   font-weight: 500;
   font-size: 2em;
@@ -56,7 +56,7 @@
 }
 
 .skillsItem {
-  color: #777;
+  color: var(--grey);
   font-family: 'Ubuntu', sans-serif;;
   padding: 1em 0;
   font-size: 1.1em;

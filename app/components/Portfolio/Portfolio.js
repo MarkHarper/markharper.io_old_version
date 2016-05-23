@@ -8,7 +8,7 @@ function Portfolio (props) {
   }
 
   return (
-    <div>
+    <div class="portfolio">
       <div id={portfolio} style={style}>
         <section className={descriptionContainer}>
           <h3 className={listTitle}>Factivate</h3>

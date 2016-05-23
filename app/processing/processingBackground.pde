@@ -4,9 +4,13 @@ float minDist = 100;
 float springAmount = 0.001;
 
 void setup() {
-  size(960, 540);
-  frameRate(30);
+  size(screen.width, screen.height - 150);
+  frameRate(40);
   initialize();
+}
+
+void restart() {
+  size(screen.width, screen.height - 150);
 }
 
 void initialize() {
@@ -16,16 +20,17 @@ void initialize() {
   particles = new Ball[numParticles];
   for(int i=0; i<numParticles; i++) {
     particles[i] = new Ball(3);
+    particles[i].mass = 3;
     particles[i].x = random(width);
     particles[i].y = random(height);
     particles[i].vx = random(6) - 3;
     particles[i].vy = random(6) - 3;
-    particles[i].setFillColor(color(255, 255, 255));
+    particles[i].setFillColor(color(38, 166, 154));
   }
 }
 
 void draw() {
-  background(0);
+  background(11, 50, 46);
 
   for(int i=0; i<numParticles; i++){
     Ball particle = particles[i];
@@ -59,7 +64,7 @@ void spring(Ball partA, Ball partB) {
   float dist = sqrt(dx * dx + dy * dy);
   if(dist < minDist){
     float alpha = 255 - 255 * (dist / minDist);
-    stroke(255, 255, 255, alpha);
+    stroke(38, 166, 154, alpha);
     line(partA.x, partA.y, partB.x, partB.y);
     float ax = dx * springAmount;
     float ay = dy * springAmount;
@@ -214,7 +219,6 @@ class Sprite extends Object {
 
   void draw() {}
 }
-d
 
 ////////////////////////////////
 

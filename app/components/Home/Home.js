@@ -4,6 +4,10 @@ import { targetButton, hireMe, title, tagline, btnInTouch, titleTag } from './st
 import { home, darkBtn } from 'sharedStyles/styles.css'
 
 function Home (props) {
+  var styles = {
+    height: props.height - 84,
+    width: props.width
+  }
   return (
     <div id={home}>
       <div className={hireMe}>
@@ -15,6 +19,11 @@ function Home (props) {
           <Link to="/contact" className={darkBtn}>Get In Touch</Link>
         </div>
       </div>
+      <canvas id={'background'}
+        styles={styles}
+        width={props.width}
+        height={props.height}>
+      </canvas>
     </div>
   )
 }

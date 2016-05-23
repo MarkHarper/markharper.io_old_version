@@ -1,4 +1,4 @@
-function BackgroundHome (width, height) {
+function backgroundHome (width, height) {
   var width = Number(width);
   var height = Number(height);
   var me = function (p) {
@@ -7,9 +7,13 @@ function BackgroundHome (width, height) {
     var minDist = 80;
     var springAmount = 0.0015;
 
+    this.restart = function (width, height) {
+      p.resize(width, height);
+    }
+
     p.setup = function () {
-      p.createCanvas(width, height);
-      p.frameRate(40);
+      p.size(width, height);
+      p.frameRate(45);
       initialize();
     }
 
@@ -157,7 +161,7 @@ function BackgroundHome (width, height) {
       if (!this.visible) {
         return;
       } else {
-        p.push();
+        p.pushMatrix();
         if(this.locked){
           this.x = this.mouseX - this.xoff;
           this.y = this.mouseY - this.yoff;
@@ -172,7 +176,7 @@ function BackgroundHome (width, height) {
           p.fill(this.fillColor);
         }
         this.draw();
-        p.pop();
+        p.popMatrix();
       }
     }
 
@@ -207,4 +211,4 @@ function BackgroundHome (width, height) {
   return me;
 }
 
-export default BackgroundHome
+export default backgroundHome

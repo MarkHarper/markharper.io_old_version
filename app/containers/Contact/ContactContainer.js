@@ -4,7 +4,7 @@ import { Contact } from 'components'
 const ContactContainer = React.createClass({
   render () {
     return (
-      <Contact />
+      <Contact width={window.innerWidth} height={window.innerHeight - 81}/>
     )
   },
 })
