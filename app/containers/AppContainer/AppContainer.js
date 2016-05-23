@@ -14,6 +14,8 @@ let switchAnimation = function (props, path) {
     }
   } else if (props.location.pathname === '/skills') {
     return pageSliderB;
+  } else if (props.location.pathname === '/contact') {
+    return pageSliderB;
   }
 }
 

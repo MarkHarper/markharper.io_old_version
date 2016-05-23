@@ -1,14 +1,12 @@
-.targetButton {
-
-}
+@import 'sharedStyles/constants.css';
 
 .title {
   text-align: center;
-  color: #FFF;
+  color: var(--white);
   font-size: 3.2em;
   margin: 0 0 0.3em 0;
   font-weight: normal;
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: var(--bodyFont);
   letter-spacing: 0.1em;
   display: block;
 }
@@ -32,17 +30,17 @@
 
 .tagline {
   margin: 1em 1.6em 1em;
-  color: #FBFBFB;
+  color: var(--white);
   padding: 0.5em 0em 0.5em 0;
   font-size: 1.3em;
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: var(--bodyFont);
   letter-spacing: 0.1em;
   line-height: 1.4em;
 }
 
 .btnInTouch {
   margin: 1em auto;
-  background-color: #30CEFF;
+  background-color: var(--primary);
   border-radius: 2px;
   font-size: 1.4em;
 }

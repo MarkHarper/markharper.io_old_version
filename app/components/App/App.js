@@ -23,9 +23,9 @@ function App (props) {
           <Link to="/portfolio" className={props.location.pathname === '/portfolio' ? activeLink : link}><span>
               Portfolio
             </span></Link>
-          <Link to="/skills" className={props.location.pathname === '/skills' ? activeLink : link}><span>
+          {/*<Link to="/skills" className={props.location.pathname === '/skills' ? activeLink : link}><span>
               About
-            </span></Link>
+            </span></Link> */}
         </div>
         <Button content={'R' + String.fromCharCode(233) + 'sum' + String.fromCharCode(233)}
                 class={lightBtn}
@@ -35,18 +35,21 @@ function App (props) {
         </Button>
       </div>
       <div>
-        <ReactCSSTransitionGroup
+        {/*<ReactCSSTransitionGroup
           component="div"
           transitionName={props.animationType}
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={500}
+          transitionEnterTimeout={400}
+          transitionLeaveTimeout={400}
           className={transitionGroup}
           styles={height}
         >
+        </ReactCSSTransitionGroup> */}
+        <div className={transitionGroup}
+        styles={height}>
           {cloneElement(props.children, {
             key: props.location.pathname
           })}
-        </ReactCSSTransitionGroup>
+        </div>
       </div>
     </div>
 
