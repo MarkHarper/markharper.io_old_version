@@ -117,7 +117,7 @@
   text-align: center;
   text-decoration: none;
   font-size: 1em;
-  font-family: var(--navFont);
+  font-family: 'Montserrat', sans-serif;
   color: var(--grey);
   text-transform: uppercase;
 }
