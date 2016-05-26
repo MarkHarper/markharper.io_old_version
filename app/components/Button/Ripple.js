@@ -57,7 +57,6 @@ class Ripple extends Component {
 }
 
 Ripple.propTypes = {
-  containerClass: PropTypes.string.isRequired,
   cursorPos: PropTypes.object.isRequired,
   removeScale: PropTypes.func.isRequired
 }

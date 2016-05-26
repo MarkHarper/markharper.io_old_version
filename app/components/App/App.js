@@ -1,59 +1,71 @@
-import React, { cloneElement }from 'react'
-import { section, container, link, activeLink, navbar, lightBtn } from 'sharedStyles/styles.css'
+import React, { Component, cloneElement }from 'react'
 import { Link } from 'react-router'
-import { app, name, nav, resume, navButton, transitionGroup, icon, hide, nameLink} from './styles.css'
+import mobile from 'is-mobile'
+import { app, transitionGroup } from './styles.css'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import Button from '.././Button/Button.js'
+import NavBar from '.././NavBar/NavBar.js'
+import Slider from '.././NavBar/Slider.js'
 
-function App (props) {
-  const height = {
-    height: props.height
+class App extends Component {
+  constructor () {
+    super()
+    this.state = {
+      visible: false,
+      isMobile: mobile()
+    }
+
+    this.show = this.show.bind(this);
+    this.hide = this.hide.bind(this);
   }
-  return (
-    <div className={app}>
-      <div className={navbar}>
-        <div className={name}>
-          <span className={hide}></span>
-          <Link to='/' className={nameLink}><img className={icon} src="./images/cafe.svg"/>Mark Harper</Link>
-        </div>
-        <div className={nav}>
-          <Link to="/" className={props.location.pathname === '/' ? activeLink : link}><span>
-            Home
-          </span></Link>
-          <Link to="/portfolio" className={props.location.pathname === '/portfolio' ? activeLink : link}><span>
-              Portfolio
-            </span></Link>
-          {/*<Link to="/skills" className={props.location.pathname === '/skills' ? activeLink : link}><span>
-              About
-            </span></Link> */}
-        </div>
-        <Button content={'R' + String.fromCharCode(233) + 'sum' + String.fromCharCode(233)}
-                class={lightBtn}
-                to={'/images/resume.pdf'}
-                target="_blank"
-                containerClass={resume}>
-        </Button>
-      </div>
-      <div>
-        {/*<ReactCSSTransitionGroup
-          component="div"
-          transitionName={props.animationType}
-          transitionEnterTimeout={400}
-          transitionLeaveTimeout={400}
-          className={transitionGroup}
-          styles={height}
-        >
-        </ReactCSSTransitionGroup> */}
-        <div className={transitionGroup}
-        styles={height}>
-          {cloneElement(props.children, {
-            key: props.location.pathname
-          })}
-        </div>
-      </div>
-    </div>
 
-  )
+  show () {
+    this.setState({ visible: true });
+    document.addEventListener("click", this.hide);
+  }
+
+  hide () {
+    document.removeEventListener("click", this.hide);
+    this.setState({ visible: false });
+  }
+
+  render () {
+    const height = {
+      height: this.props.height,
+      width: this.props.width
+    }
+    const slider = {
+      display: 'none',
+      width: '100px',
+      height: window.innerHeight
+    }
+    return (
+      <div className={app}>
+        <NavBar isMobile={this.state.isMobile}
+          showBurger={this.show}
+          location={this.props.location}
+          height={this.props.height}>
+        </NavBar>
+        <Slider height={this.props.height} visible={this.state.visible}></Slider>
+          {/*<ReactCSSTransitionGroup
+            component="div"
+            transitionName={this.props.animationType}
+            transitionEnterTimeout={400}
+            transitionLeaveTimeout={400}
+            styles={height}>
+          </ReactCSSTransitionGroup> */}
+          <div className={transitionGroup}>
+            {cloneElement(this.props.children, {
+              key: this.props.location.pathname,
+              height: this.props.height,
+              width: this.props.width
+            },
+            )}
+          </div>
+
+
+      </div>
+    )
+  }
 }
 
 export default App

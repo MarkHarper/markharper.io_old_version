@@ -13,6 +13,12 @@ function BackgroundHome (width, height) {
       initialize();
     }
 
+    p.windowResized = function () {
+      p.resizeCanvas(p.windowWidth, p.windowHeight - 82);
+      width = p.windowWidth;
+      height = p.windowHeight - 82;
+    }
+
     p.draw = function () {
       p.background(11, 50, 46);
       for(var i=0; i<numParticles; i++){
