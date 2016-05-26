@@ -17,7 +17,7 @@ gulp.task('default', function () {
 
 var options = {
     remoteUrl: "https://github.com/markharper/markharper.github.io.git",
-    branch: "master"};
+    branch: "gh-pages"};
 
 // Deploy our src folder to gh-pages
 gulp.task('deploy', function() {
