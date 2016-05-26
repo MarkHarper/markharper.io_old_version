@@ -1,10 +1,12 @@
 @import './constants.css';
+/*@import './grids-responsive-min.css'*/
 
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 .section {
@@ -18,20 +20,6 @@ html, body {
   z-index: 1;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-  padding: 0.7em 0;
-  background-color: var(--white);
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.11);
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-  overflow: auto;
-}
-
 #home {
   display: flex;
   justify-content: center;
@@ -41,6 +29,7 @@ html, body {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  background-color: var(--dark);
 }
 
 .container {
@@ -143,27 +132,9 @@ html, body {
 	background: var(--dark);
 }
 
-.lightBtn, .darkBtn{
+.lightBtn{
   background-color: var(--primary);
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 2px;
-  line-height: 1.1em;
-  text-align:center;
   color: var(--white);
-  text-decoration:none;
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  padding: 0.7em 0.9em;
-  font-family: var(--bodyFont);
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  z-index:0;
-  width: inherit;
 }
 
 .darkBtn {
@@ -183,4 +154,20 @@ html, body {
   box-shadow: rgba(0, 0, 0, 0.22) 0 2px 3px 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.22) 0 2px 3px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.22) 0 2px 3px 0;
+}
+
+.resume {
+  overflow: hidden;
+  margin: 0px 6% 0px 0%;
+  flex: 2;
+  font-size: 1em;
+}
+
+.inTouch {
+  overflow: hidden;
+  margin: 0 auto;
+  flex: 2;
+  font-size: 1.4em;
+  display: flex;
+  justify-content: center;
 }

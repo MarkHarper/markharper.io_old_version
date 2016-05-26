@@ -10,8 +10,8 @@ const routes = (
       <IndexRoute component={HomeContainer}></IndexRoute>
       <Route path='skills' component={SkillsContainer}></Route>
       <Route path='portfolio' component={PortfolioContainer}></Route>
-      <Route path='contact' component={ContactContainer}></Route>
     </Route>
+    <Route path='contact' component={ContactContainer}></Route>
   </Router>
 )
 

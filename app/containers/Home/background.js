@@ -7,8 +7,9 @@ function backgroundHome (width, height) {
     var minDist = 80;
     var springAmount = 0.0015;
 
-    this.restart = function (width, height) {
-      p.resize(width, height);
+    p.restart = function (width, height) {
+      p.size(width, height);
+      p.redraw();
     }
 
     p.setup = function () {
@@ -149,11 +150,11 @@ function backgroundHome (width, height) {
     }
 
     Ball.prototype.draw = function () {
-      if(p.dist(p.mouseX, p.mouseY, this.x, this.y) < this.radius) {
-        this.isRollOver = true;
-      }else{
+      // if(p.dist(p.mouseX, p.mouseY, this.x, this.y) < this.radius) {
+      //   this.isRollOver = true;
+      // }else{
         this.isRollOver = false;
-      }
+      // }
       p.ellipse(0, 0, this.radius*2, this.radius*2);
     }
 
@@ -162,10 +163,6 @@ function backgroundHome (width, height) {
         return;
       } else {
         p.pushMatrix();
-        if(this.locked){
-          this.x = this.mouseX - this.xoff;
-          this.y = this.mouseY - this.yoff;
-        } 
         p.translate(this.x, this.y);
         p.scale(this.scaleX, this.scaleY);
         rotate(p.PI / 180);
@@ -190,17 +187,17 @@ function backgroundHome (width, height) {
       this.isFill = true;
     }
 
-    Ball.prototype.startDrag = function () {
-      if(this.isRollOver){
-        this.locked = true;
-        this.xoff = p.mouseX - this.x;
-        this.yoff = p.mouseY - this.y;
-      }
-    }
-
-    Ball.prototype.stopDrag = function () {
-      this.locked = false;
-    }
+    // Ball.prototype.startDrag = function () {
+    //   if(this.isRollOver){
+    //     this.locked = true;
+    //     this.xoff = p.mouseX - this.x;
+    //     this.yoff = p.mouseY - this.y;
+    //   }
+    // }
+    //
+    // Ball.prototype.stopDrag = function () {
+    //   this.locked = false;
+    // }
 
     var Point = function (x, y) {
       this.x = x;

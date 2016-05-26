@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--lightPrimary);
 }
 
 .contact p {
@@ -16,7 +17,7 @@
   padding: 1em 0;
   font-size: 1.1em;
   line-height: 1.8;
-  width: 29em;
+  width: 32em;
 }
 
 .contact p a {
@@ -30,7 +31,7 @@
 
 .contact form {
   display: block;
-  width: 60%;
+  width: 40em;
 }
 
 .contact form input, .contact form textarea {
@@ -42,6 +43,7 @@
   font-family: var(--bodyFont);
   margin: 30px auto 0;
   font-size: 1em;
+  background-color: transparent;
 }
 
 .contact form input:focus,
@@ -118,4 +120,25 @@
   resize: none;
   max-height: 10.8em;
   line-height: 1.8em;
+}
+
+.backContainer {
+  align-self: center;
+  display: flex;
+  width: 40em;
+}
+
+.backContainer a:hover, .sendContainer button:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 0 2px 3px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.22) 0 2px 3px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.22) 0 2px 3px 0;
+}
+
+@media (max-width: 45em) {
+  .contact form, .backContainer {
+    width: 85%;
+  }
+  .contact p {
+    width: 80%;
+  }
 }

@@ -5,7 +5,7 @@
   --dark: #0B322E;
   --lightDark: #5C706E;
   --lightGrey: #B8B8B8;
-  --lightPrimary: #ACECE6;
+  --lightPrimary: #E3FFFC;
   --primaryWhite: #F7FAFA;
   --darkGrey: #333333;
   --grey: #777777;
@@ -16,6 +16,6 @@
 
 :root {
   --accentFont: 'Stalemate', cursive;
-  --navFont: 'Montserrat', 'sans-serif';
-  --bodyFont: 'Ubuntu', 'sans-serif';
+  --navFont: 'Montserrat', sans-serif;
+  --bodyFont: 'Ubuntu', sans-serif;
 }

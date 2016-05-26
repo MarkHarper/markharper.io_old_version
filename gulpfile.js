@@ -1,6 +1,7 @@
 // Import all packages needed for the build
 var gulp = require('gulp');
 var watch = require('gulp-watch');
+var ghPages = require('gulp-gh-pages');
 
 // Common patterns used throughout the gulp configuration
 var src = {
@@ -11,7 +12,16 @@ var src = {
 
 // The default task is what runs when you type 'gulp' in the terminal
 gulp.task('default', function () {
-  return gulp.start('img', 'font', 'processing', 'watch');
+  return gulp.start('img', 'watch');
+});
+
+var options = {
+    remoteUrl: "https://github.com/markharper/markharper.github.io.git",
+    branch: "master"};
+
+// Deploy our src folder to gh-pages
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*').pipe(ghPages(options));
 });
 
 // The watch task watches a directory for changes and tells the
@@ -23,13 +33,13 @@ gulp.task('watch', function () {
     gulp.start('img');
   });
 
-  watch(src.allFont, function () {
-    gulp.start('font');
-  });
+  // watch(src.allFont, function () {
+  //   gulp.start('font');
+  // });
 
-  watch(src.allProcessing, function () {
-    gulp.start('processing');
-  });
+  // watch(src.allProcessing, function () {
+  //   gulp.start('processing');
+  // });
 });
 
 // Move any images to the dist folder

@@ -9,65 +9,6 @@
   flex-direction: column;
 }
 
-.name {
-  font-family: var(--accentFont);
-  font-size: 2.5em;
-  padding: 0 0 0 7.5%;
-  font-weight: bold;
-  width: 33%;
-  letter-spacing: 0.2em;
-  box-sizing: border-box;
-  flex: 2;
-}
-
-.nameLink {
-  text-decoration: none;
-  color: var(--darkGrey);
-}
-
-.name:hover {
-  cursor: pointer;
-}
-
-.name:hover .hide {
-  background-color: transparent;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 33%;
-}
-
-.resume {
-  border-radius: 2px;
-  position: relative;
-  float: right;
-  margin: 10px 0;
-}
-
-.navButton {
-  text-decoration: none;
-}
-
 .transitionGroup {
   margin-top: 82px;
-}
-
-.icon {
-  width: 45px;
-  vertical-align: middle;
-  position: absolute;
-  transform: translate(-125%, -2%);
-}
-
-.hide {
-  background-color: var(--white);
-  width: 45px;
-  height: 18px;
-  position: absolute;
-  z-index: 5;
-  transform: translate(-125%, -11%);
-  transition: background-color 0.3s;
 }

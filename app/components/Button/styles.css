@@ -1,7 +1,38 @@
-.outerContainer {
+@import 'sharedStyles/constants.css';
+
+.link {
+  border-radius: 2px;
+  position: relative;
+  float: right;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 2px;
+  line-height: 1.1em;
+  text-align:center;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 0.7em 0.9em;
+  font-family: var(--bodyFont);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  z-index:0;
+  width: inherit;
+}
+
+.innerContainer {
+  border-radius: 2px;
+  position: relative;
+  float: right;
   overflow: hidden;
-  margin: 0px 6% 0px 0%;
-  flex: 2;
 }
 
 .ink {

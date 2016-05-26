@@ -22,18 +22,43 @@ let switchAnimation = function (props, path) {
 class AppContainer extends Component {
   constructor(props) {
     super(props);
+    this.handleResize = this.handleResize.bind(this);
+
     this.state = {
+      width: window.innerWidth,
+      height: window.innerHeight - 82,
       animationType: pageSliderA
     }
   }
+
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  componentDidMount () {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  handleResize (e) {
+    this.setState({
+      width: window.outerWidth,
+      height: window.innerHeight - 82
+    });
+  }
+
   componentWillReceiveProps (nextProps) {
     this.setState({
       animationType: switchAnimation(this.props, nextProps.location.pathname)
     })
   }
+
   render () {
     return (
-      <App animationType={this.state.animationType} children={this.props.children} location={this.props.location} height={window.innerHeight - 83}/>
+      <App animationType={this.state.animationType}
+        children={this.props.children}
+        location={this.props.location}
+        height={this.state.height}
+        width={this.state.width}/>
     )
   }
 }
