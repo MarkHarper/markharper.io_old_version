@@ -14,7 +14,7 @@
 }
 
 .name {
-  font-family: var(--accentFont);
+  font-family: 'Stalemate', cursive;
   font-size: 2.5em;
   padding: 0 0 0 7.5%;
   font-weight: bold;
