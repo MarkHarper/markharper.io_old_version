@@ -9,7 +9,6 @@
 
 .portfolioImg, .portfolioImgLeft {
   composes: transitionImg from './imgTransition.css';
-  composes: pure-img from 'SharedStyles/pure-min.css';
   max-width: 100%;
   height: auto;
   display: block;
