@@ -35,12 +35,12 @@
 }
 
 .portfolioTitles {
-  font-family: var(--bodyFont);
+  font-family: 'Ubuntu', sans-serif;
   color: var(--darkGrey);
 }
 
 .techUsedTitle {
-  font-family: var(--bodyFont);
+  font-family: 'Ubuntu', sans-serif;
   color: var(--darkGrey);
 }
 
