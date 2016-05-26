@@ -43,7 +43,7 @@ html, body {
 	position: relative;
   font-size: 1em;
   text-decoration: none;
-  font-family: var(--navFont);
+  font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   text-transform: uppercase;
   font-weight: 500;
@@ -88,7 +88,7 @@ html, body {
 	margin-top: 7px;
   text-decoration: none;
   color: var(--grey);
-  font-family: var(--navFont);
+  font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   text-transform: uppercase;
   font-weight: 500;
