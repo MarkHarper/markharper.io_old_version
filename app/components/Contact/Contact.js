@@ -66,7 +66,7 @@ function Contact (props) {
           </div>
           <Button a={false} content={'Send'}
             OnClick={(evt) => {formSpree(evt)}}
-            class={sendBtn}
+            class={send}
             container={sendContainer}
             target="_self"
             hideClass={send}

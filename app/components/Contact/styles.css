@@ -134,6 +134,10 @@
   -moz-box-shadow: rgba(0, 0, 0, 0.22) 0 2px 3px 0;
 }
 
+.send {
+  font-size: 1em;
+}
+
 @media (max-width: 45em) {
   .contact form, .backContainer {
     width: 85%;

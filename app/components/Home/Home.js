@@ -14,7 +14,7 @@ function Home (props) {
     <div id={home} style={style}>
       <div className={hireMe}>
         <div className={titleTag}>
-          <span className={title}>Javascript Developer</span>
+          <span className={title}>Software Developer</span>
           <p className={tagline}>I have a passion for code, coffee and challenging projects</p>
         </div>
         <Button a={false} content={'Get in touch'}
