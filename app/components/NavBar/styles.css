@@ -84,9 +84,9 @@
 }
 
 .slider {
-  position: absolute;
+  position: fixed;
   clear: left;
-  display: inline-block;
+  display: block;
   width: 100%;
   height: auto;
   max-height: 0px;
@@ -96,7 +96,7 @@
   background-color: var(--white);
   z-index: 1000;
   transition: all 1s ease;
-  -webkit-transition: all 1s ease;
+  -webkit-transition: all 250ms ease;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.11);
 }
 
