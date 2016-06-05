@@ -14,7 +14,7 @@ function backgroundHome (width, height) {
 
     p.setup = function () {
       p.size(width, height);
-      p.frameRate(45);
+      p.frameRate(60);
       initialize();
     }
 
@@ -187,17 +187,17 @@ function backgroundHome (width, height) {
       this.isFill = true;
     }
 
-    // Ball.prototype.startDrag = function () {
-    //   if(this.isRollOver){
-    //     this.locked = true;
-    //     this.xoff = p.mouseX - this.x;
-    //     this.yoff = p.mouseY - this.y;
-    //   }
-    // }
-    //
-    // Ball.prototype.stopDrag = function () {
-    //   this.locked = false;
-    // }
+    Ball.prototype.startDrag = function () {
+      if(this.isRollOver){
+        this.locked = true;
+        this.xoff = p.mouseX - this.x;
+        this.yoff = p.mouseY - this.y;
+      }
+    }
+
+    Ball.prototype.stopDrag = function () {
+      this.locked = false;
+    }
 
     var Point = function (x, y) {
       this.x = x;
