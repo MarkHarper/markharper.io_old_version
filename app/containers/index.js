@@ -1,6 +1,0 @@
-export HomeContainer from './Home/HomeContainer'
-export ContactContainer from './Contact/ContactContainer'
-export SkillsContainer from './Skills/SkillsContainer'
-export ArticlesContainer from './Articles/ArticlesContainer'
-export PortfolioContainer from './Portfolio/PortfolioContainer'
-export AppContainer from './AppContainer/AppContainer'
