@@ -1,7 +1,7 @@
 // Import all packages needed for the build
 var gulp = require('gulp');
 var watch = require('gulp-watch');
-var ghPages = require('gulp-gh-pages');
+var ghPages = require('gulp-gh-pages-cname');
 
 // Common patterns used throughout the gulp configuration
 var src = {
