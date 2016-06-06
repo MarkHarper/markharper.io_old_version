@@ -16,10 +16,11 @@ gulp.task('default', function () {
 });
 
 var options = {
-    remoteUrl: "https://github.com/markharper/markharper.github.io.git",
-    branch: "master",
-    cname: 'markharper.io',
-    force: true};
+  remoteUrl: "https://github.com/markharper/markharper.github.io.git",
+  branch: "master",
+  cname: 'markharper.io',
+  force: true
+};
 
 // Deploy our src folder to gh-pages
 gulp.task('deploy', function() {
