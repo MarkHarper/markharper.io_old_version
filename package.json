@@ -47,6 +47,7 @@
     "css-loader": "^0.23.1",
     "eslint": "^2.10.2",
     "eslint-plugin-react": "^5.1.1",
+    "gulp-gh-pages-cname": "^0.5.2",
     "html-webpack-plugin": "^2.16.1",
     "image-webpack-loader": "^1.8.0",
     "pure-css": "^1.0.4",

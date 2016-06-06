@@ -1,7 +1,7 @@
 // Import all packages needed for the build
 var gulp = require('gulp');
 var watch = require('gulp-watch');
-var ghPages = require('gulp-gh-pages');
+var ghPages = require('gulp-gh-pages-cname');
 
 // Common patterns used throughout the gulp configuration
 var src = {
@@ -16,8 +16,10 @@ gulp.task('default', function () {
 });
 
 var options = {
-    remoteUrl: "https://github.com/markharper/markharper.github.io.git",
-    branch: "master"};
+  remoteUrl: "https://github.com/markharper/markharper.github.io.git",
+  branch: "master",
+  cname: 'markharper.io'
+};
 
 // Deploy our src folder to gh-pages
 gulp.task('deploy', function() {
