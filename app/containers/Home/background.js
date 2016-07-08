@@ -20,36 +20,33 @@ let numParticles = 45;
 let minDist = 80;
 let springAmount = 0.0015;
 
-export function restart (width, height) {
-  // change the size of the Canvas
-
-  // change the edges for the visualization
-
-}
-
-export function setup (width, height) {
-  // set the edges for the visualization
-
+export function setup (width, height) {  
   // set the frame rate
+  let arg = {
+    width,
+    height
+  }
+
+  interval(draw, arg, 16.67)
 
   // run the visualization
-  initialize()
+  initialize(width, height)
 }
 
-let draw = function () {
+var draw = function (arg) {
   for(var i=0; i<numParticles; i++){
     var particle = particles[i];      
     particle.x += particle.vx;
     particle.y += particle.vy;
-    if(particle.x > width){
+    if(particle.x > arg.width){
       particle.x = 0;
     } else if(particle.x < 0){
-      particle.x = width;
+      particle.x = arg.width;
     }
-    if(particle.y > height){
+    if(particle.y > arg.height){
       particle.y = 0;
     } else if(particle.y < 0){
-      particle.y = height;
+      particle.y = arg.height;
     }
     particle.update();
   }
@@ -70,7 +67,7 @@ let draw = function () {
   }
 }
 
-function initialize() {
+function initialize(width, height) {
   for(var i=0; i<numParticles; i++) {
     if (Math.random() > 0.66) {
       var ball = new Ball(5);
