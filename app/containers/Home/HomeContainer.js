@@ -1,13 +1,26 @@
 import React, { Component } from 'react'
 import { Home } from 'components'
 import { home } from 'sharedStyles/styles.css'
-import BackgroundHome from './BackgroundHome.js'
-import p5 from 'p5'
-
+import { resize, setup } from './background.js'
 
 class HomeContainer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      backgroundSetup: false
+    }
+  }
+
   componentDidMount () {
-    new p5(BackgroundHome(this.props.width, this.props.height), home);
+    if (this.state.backgroundSetup === true) {
+      resize(this.props.width, this.props.height);
+    } else {
+      setup(this.props.width, this.props.height);
+      this.setState({
+        backgroundSetup: true
+      });
+    }
   }
 
   render () {

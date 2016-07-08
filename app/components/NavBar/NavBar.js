@@ -54,7 +54,7 @@ class NavBar extends Component {
           <span style={this.props.isMobile ? transparent : {}}
             className={hide}></span>
           <Link to='/' className={nameLink}><img className={icon} src="./images/cafe.svg"/>
-            {(this.state.burger || this.props.isMobile) === true ? 'MH' : 'Mark Harper'}
+            Mark Harper
           </Link>
         </div>
         {(this.state.burger || this.props.isMobile) === true ? <Burger showBurger={this.props.showBurger}

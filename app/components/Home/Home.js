@@ -9,7 +9,9 @@ function Home (props) {
     height: props.height,
     width: props.width
   }
-
+  const background = {
+    backgroundColor: '#0B322E'
+  }
   return (
     <div id={home} style={style}>
       <div className={hireMe}>
@@ -24,6 +26,11 @@ function Home (props) {
           target="_self">
         </Button>
       </div>
+      <canvas id="background"
+        height={props.height}
+        width={props.width}
+        style={background}>
+      </canvas>
     </div>
   )
 }
