@@ -90,8 +90,8 @@ function initialize(width, height) {
  
 function spring(partA, partB, dx, dy, dist) {
   var alpha = 255 - (255 * (dist / minDist));
-  Canvas.stroke(38, 166, 154, alpha);
-  Canvas.drawline(partA.x, partA.y, partB.x, partB.y);
+  ctx.stroke(38, 166, 154, alpha);
+  ctx.drawline(partA.x, partA.y, partB.x, partB.y);
   var ax = dx * springAmount;
   var ay = dy * springAmount;
   partA.vx += ax;
@@ -161,14 +161,7 @@ var Ball = function (radius) {
 }
 
 Ball.prototype.draw = function () {
-  // lookup p5.dist, p5.mouseX, p5.mouseY in docs
-  if(p.dist(p.mouseX, p.mouseY, this.x, this.y) < this.radius) {
-    this.isRollOver = true;
-  }else{
-    this.isRollOver = false;
-  }
-  // lookup p5.ellipse in docs
-  p.ellipse(0, 0, this.radius*2, this.radius*2);
+  ctx.ellipse(0, 0, this.radius*2, this.radius*2);
 }
 
 Ball.prototype.update = function () {
@@ -176,18 +169,16 @@ Ball.prototype.update = function () {
   if (!this.visible) {
     return;
   } else {
-    p.pushMatrix();
-    p.translate(this.x, this.y);
-    p.scale(this.scaleX, this.scaleY);
-    rotate(p.PI / 180);
+    ctx.translate(this.x, this.y);
+    ctx.scale(this.scaleX, this.scaleY);
+    rotate(Math.PI / 180);
     if (this.isStroke) {
-      p.stroke(this.strokeColor);
+      ctx.stroke(this.strokeColor);
     }
     if (this.isFill) {
-      p.fill(this.fillColor);
+      ctx.fill(this.fillColor);
     }
     this.draw();
-    p.popMatrix();
   }
 }
 
@@ -199,14 +190,6 @@ Ball.prototype.setStrokeColor = function (strokeColor) {
 Ball.prototype.setFillColor = function (fillColor) {
   this.fillColor = fillColor;
   this.isFill = true;
-}
-
-Ball.prototype.startDrag = function () {
-  if(this.isRollOver){
-    this.locked = true;
-    this.xoff = p.mouseX - this.x;
-    this.yoff = p.mouseY - this.y;
-  }
 }
 
 Ball.prototype.stopDrag = function () {
