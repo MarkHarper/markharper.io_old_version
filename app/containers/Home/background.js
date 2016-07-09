@@ -64,7 +64,6 @@ export function background (width, height, canvas) {
   }
    
   function spring(partA, partB, dx, dy, dist) {
-    debugger
     var alpha = (255 - (255 * (dist / minDist))) / 255;
     ctx.beginPath();
     ctx.strokeStyle = 'rgba(38, 166, 154, ' + alpha + ')';
