@@ -1,18 +1,3 @@
-// Tools
-// Canvas, JS
-// Specs
-// Maintain current functionality of the visualization
-// Resizable
-// 60fps frame rate
-
-// Sine/cos/tan
-// a matrix push/pop
-// framerate/redraw setimeout function
-// random number generator
-// sqrt
-// color generator
-// basic canvas functions (drawline, stroke, etc.)
-
 import { interval } from '../../helpers/Helpers.js'
 
 export function background (width, height, canvas) {
@@ -40,7 +25,6 @@ export function background (width, height, canvas) {
       }
       particle.update();
     }
-         
     for(var i=0; i<numParticles; i++){
       var partA = particles[i];
       for(var j=i+1; j<numParticles; j++){
@@ -63,29 +47,31 @@ export function background (width, height, canvas) {
         var ball = new Ball(5);
         ball.mass = 3;
         ball.setFillColor('#26A69A');
-        ball.vx = Math.random(2) - 1;
-        ball.vy = Math.random(2) - 1;
+        ball.vx = (Math.random()*2) - 1;
+        ball.vy = (Math.random()*2) - 1;
       } else {
         var ball = new Ball(3);
         ball.mass = 2;
         ball.setFillColor('#8BE5DC');
-        ball.vx = Math.random(4) - 2;
-        ball.vy = Math.random(4) - 2;
+        ball.vx = (Math.random()*4) - 2;
+        ball.vy = (Math.random()*4) - 2;
       }
-      ball.x = Math.random(width);
-      ball.y = Math.random(height);
+      ball.x = Math.random()*width;
+      ball.y = Math.random()*height;
       particles[i] = ball;
     }
     run();
   }
    
   function spring(partA, partB, dx, dy, dist) {
-    var alpha = 255 - (255 * (dist / minDist));
+    debugger
+    var alpha = (255 - (255 * (dist / minDist))) / 255;
     ctx.beginPath();
-    ctx.strokeStyle = 'rgb(38, 166, 154, ' + alpha + ')';
+    ctx.strokeStyle = 'rgba(38, 166, 154, ' + alpha + ')';
     ctx.moveTo(partA.x, partA.y);
     ctx.lineTo(partB.x, partB.y);
     ctx.closePath();
+    ctx.stroke();
     var ax = dx * springAmount;
     var ay = dy * springAmount;
     partA.vx += ax;
@@ -158,10 +144,8 @@ export function background (width, height, canvas) {
     if (!this.visible) {
       return;
     } else {
-      rotate(Math.PI / 180);
       ctx.beginPath();
-      ctx.arc(0, 0, this.radius,0,2*Math.PI);
-      ctx.translate(this.x, this.y);
+      ctx.arc(this.x, this.y, this.radius,0,2*Math.PI);      
       ctx.scale(this.scaleX, this.scaleY);
       ctx.closePath();
 
