@@ -23,20 +23,20 @@ export function background (width, height, canvas) {
   var springAmount = 0.0015;
   var ctx = canvas.getContext('2d');
 
-  var draw = function (arg) {
+  var draw = function () {
     for(var i=0; i<numParticles; i++){
       var particle = particles[i];      
       particle.x += particle.vx;
       particle.y += particle.vy;
-      if(particle.x > arg.width){
+      if(particle.x > width){
         particle.x = 0;
       } else if(particle.x < 0){
-        particle.x = arg.width;
+        particle.x = width;
       }
-      if(particle.y > arg.height){
+      if(particle.y > height){
         particle.y = 0;
       } else if(particle.y < 0){
-        particle.y = arg.height;
+        particle.y = height;
       }
       particle.update();
     }
@@ -76,15 +76,16 @@ export function background (width, height, canvas) {
       ball.y = Math.random(height);
       particles[i] = ball;
     }
+    run();
   }
    
   function spring(partA, partB, dx, dy, dist) {
     var alpha = 255 - (255 * (dist / minDist));
-    ctx.strokeStyle = 'rgb(38, 166, 154, ' + alpha + ')';
     ctx.beginPath();
+    ctx.strokeStyle = 'rgb(38, 166, 154, ' + alpha + ')';
     ctx.moveTo(partA.x, partA.y);
     ctx.lineTo(partB.x, partB.y);
-    ctx.stroke();
+    ctx.closePath();
     var ax = dx * springAmount;
     var ay = dy * springAmount;
     partA.vx += ax;
@@ -153,29 +154,27 @@ export function background (width, height, canvas) {
     this.visible = true;
   }
 
-  Ball.prototype.draw = function () {
-    ctx.beginPath();
-    ctx.arc(100,75,50,0,2*Math.PI);
-    ctx.stroke();
-  }
-
   Ball.prototype.update = function () {
-    //check p5 docs
     if (!this.visible) {
       return;
     } else {
+      rotate(Math.PI / 180);
+      ctx.beginPath();
+      ctx.arc(0, 0, this.radius,0,2*Math.PI);
       ctx.translate(this.x, this.y);
       ctx.scale(this.scaleX, this.scaleY);
-      rotate(Math.PI / 180);
+      ctx.closePath();
+
       if (this.isStroke) {
         ctx.strokeStyle = this.strokeColor;
-        ctx.stroke();
       }
+
+      ctx.stroke();
+      
       if (this.isFill) {
         ctx.fillStyle = this.fillColor;
         ctx.fill();
-      }
-      this.draw();
+      }    
     }
   }
 
@@ -198,18 +197,11 @@ export function background (width, height, canvas) {
     this.y = y;
   }
 
-  function run (width, height) {  
-    // set the frame rate
-    let arg = {
-      width,
-      height
-    }
-
-    interval(draw, arg, 100000);
-
-    // run the visualization
-    initialize(width, height);
+  function run () {  
+    ctx.clearRect(0, 0, width, height);
+    draw();
+    requestAnimationFrame(run);
   }
 
-  run(width, height);
+  initialize(width, height);
 }
