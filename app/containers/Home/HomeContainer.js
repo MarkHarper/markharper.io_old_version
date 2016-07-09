@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Home } from 'components'
 import { home } from 'sharedStyles/styles.css'
-import { resize, setup } from './background.js'
+import { background } from './background.js'
 
 class HomeContainer extends Component {
   constructor(props) {
@@ -13,7 +13,8 @@ class HomeContainer extends Component {
   }
 
   componentDidMount () {
-    setup(this.props.width, this.props.height);
+    let canvas = document.getElementById('background');
+    background(this.props.width, this.props.height, canvas);
   }
 
   render () {
