@@ -17,6 +17,11 @@ class HomeContainer extends Component {
     background(this.props.width, this.props.height, canvas);
   }
 
+  componentDidUpdate () {
+    let canvas = document.getElementById('background');
+    background(this.props.width, this.props.height, canvas);
+  }
+
   render () {
     return (
       <Home width={this.props.width}
