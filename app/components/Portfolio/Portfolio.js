@@ -40,7 +40,7 @@ function Portfolio (props) {
           </div>
         </section>
         <section className={imgContainer}>
-          <img className={portfolioImg} src="./images/factivate.png"/>
+          <a href="https://www.factivate.com/"><img className={portfolioImg} src="./images/factivate.png"/></a>
           {/*<div>
             <Button a={true} content={'Live'}
               class={liveBtn}
@@ -94,7 +94,7 @@ function Portfolio (props) {
           </div>
         </section>
         <section className={imgContainerRight}>
-          <img className={portfolioImgLeft} src="./images/big.png"/>
+          <a href="https://github.com/Data-Science-TIY/builditgreen"><img className={portfolioImgLeft} src="./images/big.png"/></a>
           {/*<div>
             <Button a={true} content={'Live'}
               class={liveBtn}
@@ -138,7 +138,7 @@ function Portfolio (props) {
           </div>
         </section>
         <section className={imgContainer}>
-          <img className={portfolioImg} src="./images/gol.png"/>
+          <a href="http://markharper.io/GameOfLife/"><img className={portfolioImg} src="./images/gol.png"/></a>
           {/*<div>
             <Button a={true} content={'Live'}
               class={liveBtn}
@@ -183,7 +183,7 @@ function Portfolio (props) {
           </div>
         </section>
         <section className={imgContainerRight}>
-          <img className={portfolioImgLeft} src="./images/memory.png"/>
+          <a href="http://markharper.io/memory-game/"><img className={portfolioImgLeft} src="./images/memory.png"/></a>
           {/*<div>
             <Button a={true} content={'Live'}
               class={liveBtn}
